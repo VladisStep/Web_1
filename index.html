@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tetris</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div id="root" style="display: block">
+        <h1>
+            <span style="color: red">T</span><span style="color: orange">E</span><span style="color: yellow">T</span><span style="color: green">R</span><span style="color: cyan">I</span><span style="color: purple">S</span>
+        </h1>
+
+
+        <form method="get" id="startMenu" style="display: block;" >
+            <label>
+                Your name:<br>
+                <input type="text" id="p" placeholder="name"><br><br>
+                <input type="button" name="btn" value="Start" onclick="controller.startGame();" ><br><br>
+
+            </label>
+        </form>
+
+        <label id="pauseMenu" style="display: none">
+            <input type="button" name="btn" value="Continue" onclick="controller.play()" ><br><br>
+
+        </label>
+
+        <label id="endGameMenu" style="display: none">
+            <input type="button" name="btn" value="Reset" onclick="controller.reset()" ><br><br>
+
+        </label>
+
+
+        <table id="table" style="display: none; color: azure" >
+            <style>
+                table {
+                    width: 300px; /* Ширина таблицы */
+                    border: 1px solid green; /* Рамка вокруг таблицы */
+                    margin: auto; /* Выравниваем таблицу по центру окна  */
+                }
+                td {
+                    text-align: center; /* Выравниваем текст по центру ячейки */
+                }
+            </style>
+        </table>
+
+    </div>
+
+
+
+
+    <script src="./index.js" type="module">
+
+    </script>
+</body>
+</html>
