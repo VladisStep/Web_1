@@ -25,7 +25,7 @@
         </form>
 
         <label id="pauseMenu" style="display: none">
-            <input type="button" name="btn" value="Continue" onclick="controller.play()" ><br><br>
+            <input type="button" name="btn" value="Continue" onclick="controller.play()"  ><br><br>
 
         </label>
 
@@ -35,18 +35,60 @@
         </label>
 
 
-        <table id="table" style="display: none; color: azure" >
+<!--        <table id="table" style="display: none; color: azure" >-->
+<!--            <style>-->
+<!--                table {-->
+<!--                    width: 300px; /* Ширина таблицы */-->
+<!--                    border: 1px solid green; /* Рамка вокруг таблицы */-->
+<!--                    margin: auto; /* Выравниваем таблицу по центру окна  */-->
+<!--                }-->
+<!--                td {-->
+<!--                    text-align: center; /* Выравниваем текст по центру ячейки */-->
+<!--                }-->
+<!--            </style>-->
+<!--        </table>-->
+
+        <table id="table" style="display: none; color: azure"  >
             <style>
                 table {
                     width: 300px; /* Ширина таблицы */
                     border: 1px solid green; /* Рамка вокруг таблицы */
-                    margin: auto; /* Выравниваем таблицу по центру окна  */
+                    margin: auto; /* Выравниваем таблицу по центру окна  *!*/
+
                 }
                 td {
                     text-align: center; /* Выравниваем текст по центру ячейки */
+                    width: 150px;
                 }
             </style>
+            <tr align="center">
+                <td id = 'name1' ></td><td id = 'score1'  ></td>
+            </tr>
+
+            <tr>
+                <td id = 'name2'></td><td id = 'score2'></td>
+
+            </tr>
+
+            <tr>
+                <td id = 'name3'></td><td id = 'score3'></td>
+
+            </tr>
+
+            <tr>
+                <td id = 'name4'></td><td id = 'score4'></td>
+
+            </tr>
+
+            <tr>
+                <td id = 'name5'></td><td id = 'score5'></td>
+
+            </tr>
+
+
         </table>
+
+
 
     </div>
 

@@ -23,6 +23,9 @@ export default class Controller {
 
     play () {
         document.getElementById('table').style.display = "none";
+
+
+
         document.getElementById('pauseMenu').style.display = "none";
         this.isPlaying = true;
         this.startTimer();
@@ -212,30 +215,22 @@ export default class Controller {
 
     writeTable(){
 
-        let elem = document.querySelector('#table');
-
-        let table = document.createElement('table');
-
-        for(let i = 0; i < 6; i ++){
-            let tr = document.createElement('tr');
-
-
-            let td1 = document.createElement('td');
-            let td2 = document.createElement('td');
-
+        for (let i = 1; i < 6; i++){
             const gamer = JSON.parse(localStorage.getItem(i.toString()));
-            if (gamer){
-                td1.innerText = gamer.name;
-                td2.innerText = gamer.score;
+
+            if (gamer !=  null){
+
+                if (gamer.name == ""){
+                    gamer.name = "No name";
+                }
+                document.getElementById('name' + i).innerHTML = gamer.name;
+                document.getElementById('score' + i).innerHTML = gamer.score;
+            } else {
+                break;
             }
 
-            tr.appendChild(td1);
-            tr.appendChild(td2);
 
-            table.appendChild(tr);
         }
-
-        elem.appendChild(table);
     }
 
       

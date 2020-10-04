@@ -40,6 +40,8 @@ export default class View {
 
     }
 
+
+
     renderMainScrean( state ){ // перерисовка
         this.clearScreen();
         this.renderPlayfield(state);
@@ -113,7 +115,7 @@ export default class View {
         this.context.font = '14px "Press Start 2p"';    // шрифт
 
         this.context.fillText(`Score: ${score}`, this.panelX, this.panelY + 0);   // рисовка
-        this.context.fillText(`Liens: ${lines}`, this.panelX, this.panelY + 24);
+        this.context.fillText(`Lines: ${lines}`, this.panelX, this.panelY + 24);
         this.context.fillText(`Level: ${level}`, this.panelX, this.panelY + 48);
         this.context.fillText(`Next: `, this.panelX, this.panelY + 96);
 
@@ -135,7 +137,11 @@ export default class View {
         this.context.strokeStyle = 'white'; // граница
         this.context.lineWidth = this.playfieldBorderWidth;
         this.context.strokeRect(0, 0, this.playfieldWidth, this.playfieldHeigth);
+
+
+
     }
+
 
     renderBLock(x, y, width, height, color){
         this.context.fillStyle = color;  // цвет закраски
